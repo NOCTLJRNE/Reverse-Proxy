@@ -8,6 +8,7 @@
     "http-proxy": "^1.18.0"
   },
   "scripts": {
-    "proxy": "node nuxtProxy.js"
+    "proxy80": "PORT=80 node nuxtProxy.js",
+    "proxy8080": "PORT=8080 node nuxtProxy.js"
   }
 }
