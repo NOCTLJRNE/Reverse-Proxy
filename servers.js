@@ -2,6 +2,7 @@ var express = require("express");
 var app1 = express();
 var app2 = express();
 var app3 = express();
+var app4 = express();
 app1.get("/app1/*", function (req, res) {
   res.send("Hello from Server 1");
 });
@@ -11,6 +12,10 @@ app2.get("/app2/*", function (req, res) {
 app3.get("/app3/*", function (req, res) {
   res.send("Hello from Server 3");
 });
+app3.get("/*", function (req, res) {
+  res.send("Hello from Server 4");
+});
 app1.listen(3001);
 app2.listen(3002);
 app3.listen(3003);
+app3.listen(3000);
